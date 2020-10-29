@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="m-content">
+    <div class="m-portlet m-portlet--mobile">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <h3 class="m-portlet__head-text">Consulta de estudiantes
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="m-portlet__body">
+            <table id="table_id" class="table m-table m-table--head-separator-primary">
+                <thead>
+                    <tr>
+                        <th>Cédula</th>
+                        <th>Matrícula</th>
+                        <th>Carrera</th>
+                        <th>Total de créditos</th>
+                        <th>Créditos cursados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var estudiante in Model)
+                    {
+                        <tr>
+                            <td>@estudiante.Cedula</td>
+                            <td>@estudiante.Matricula</td>
+                            <td>@estudiante.Carrera</td>
+                            <td>@estudiante.CrdTotal</td>
+                            <td>@estudiante.CrdtCursados</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
